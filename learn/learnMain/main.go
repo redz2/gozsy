@@ -1,17 +1,20 @@
-package learn
+package main
 
 import (
 	"fmt"
 	"reflect"
 	"strconv"
+
+	"github.com/redz2/gozsy/learn"
 )
 
-func sayHello(s string) string {
-	return "Hello " + s
-}
+// func sayHello(s string) string {
+// 	return "Hello " + s
+// }
 
-func test() {
-	fmt.Println((sayHello("zhouyi")))
+func main() {
+	// fmt.Println((sayHello("zhouyi")))
+	learn.LearnVar()
 
 	// 布尔类型
 	// 如果没有给布尔变量赋值，默认为false
@@ -38,4 +41,5 @@ func test() {
 	// string类型的字符串，大小限制，返回float64
 	s3, _ := strconv.ParseFloat("123.12312", 64)
 	fmt.Println(s1, s2, s3)
+
 }

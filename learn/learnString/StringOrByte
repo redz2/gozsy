@@ -1,0 +1,9 @@
+// 标准转换
+// string to []byte
+// s1 := "hello"
+// b := []byte(s1)
+
+// []byte to string
+// s2 := string(b)
+
+// 强转换
