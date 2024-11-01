@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/redzy/gozsy/pkg/datasource/victoriametrics"
+	"github.com/redz2/gozsy/pkg/datasource/victoriametrics"
 )
 
 func main() {

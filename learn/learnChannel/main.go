@@ -3,25 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	// chan：表示通道类型的关键字
-	// int：表示该通道类型的元素类型
-	// 3：表示通道的容量（缓冲通道，非缓冲通道）
+	// 缓冲通道，非缓冲通道
 	ch1 := make(chan int, 3)
-	// 2将被发送到通道
 	ch1 <- 2
 	ch1 <- 1
 	ch1 <- 3
-	// 要从该通道接收一个值
 	elem1 := <-ch1
-	fmt.Printf("The first element received from channel ch1: %v\n",
-		elem1)
+	fmt.Printf("The first element received from channel ch1: %v\n", elem1)
 }
-
-// 通道：一个先进先出的队列
-// 可以利用通道在多个 goroutine 之间传递数据。
-// 并发安全
-
-// 对通道的发送和接收操作有哪些基本特性？
 
 // 1，对于同一个通道，发送操作之间是互斥的，接收操作之间也是互斥的
 // 对于同一个元素来说，发送和接收操作也是互斥的
