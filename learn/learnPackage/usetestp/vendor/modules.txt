@@ -1,0 +1,7 @@
+# xxx/testp v1.1.1 => ../testp
+## explicit; go 1.23.2
+xxx/testp
+# xxx/testp/count v1.1.1 => ../testp/count
+## explicit
+# xxx/testp => ../testp
+# xxx/testp/count => ../testp/count

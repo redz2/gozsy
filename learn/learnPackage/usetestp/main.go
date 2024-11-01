@@ -27,4 +27,5 @@ func main() {
 	// 如果不一致，引用时还是需要指定package名称，导入模块过多
 	testp.TestP()
 	pkg.PrintPackage()
+	testp.TestP()
 }

@@ -5,30 +5,8 @@ github.com/Ullaakut/nmap/pkg/osfamilies
 # github.com/alecthomas/kong v0.8.0
 ## explicit; go 1.18
 github.com/alecthomas/kong
-# github.com/json-iterator/go v1.1.12
-## explicit; go 1.12
-github.com/json-iterator/go
-# github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
-## explicit
-github.com/modern-go/concurrent
-# github.com/modern-go/reflect2 v1.0.2
-## explicit; go 1.12
-github.com/modern-go/reflect2
-# github.com/mohuishou/go-test-multi-module/a v1.0.1
-## explicit; go 1.13
-github.com/mohuishou/go-test-multi-module/a
-# github.com/prometheus/client_golang v1.16.0
-## explicit; go 1.17
-github.com/prometheus/client_golang/api
-github.com/prometheus/client_golang/api/prometheus/v1
-# github.com/prometheus/common v0.42.0
-## explicit; go 1.18
-github.com/prometheus/common/model
-# github.com/redz2/gozsy/learn/my_module_test v0.1.1
+# github.com/redz2/gozsy/learn/hello v1.0.0
 ## explicit; go 1.23.2
+github.com/redz2/gozsy/learn/hello
 # github.com/stretchr/testify v1.8.4
 ## explicit; go 1.20
-# golang.org/x/net v0.15.0
-## explicit; go 1.17
-# google.golang.org/protobuf v1.31.0
-## explicit; go 1.11

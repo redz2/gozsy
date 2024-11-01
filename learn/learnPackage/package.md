@@ -34,7 +34,11 @@
     go.mod
     go.sum
     ```
-3. main.go必须在module目录下，否则无法导入自定义包
-4. github.com/redz2/learn-python
-    * github地址 + 用户 + 项目名
-    * go mod init github.com/redz2/gozsy
+3. 创建一个自己的模块并发布
+    * 创建模块
+    ```
+    cd learn/hello/
+    go mod init learn/hello/v1.0.0
+    ```
+    * 提交代码
+    * 
