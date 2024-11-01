@@ -6,7 +6,7 @@ require (
 	github.com/Ullaakut/nmap v1.0.0
 	github.com/alecthomas/kong v0.8.0
 	github.com/mohuishou/go-test-multi-module/a v1.0.1
-	github.com/redz2/gozsy/learn/my_module_test v0.1.1 // indirect
+	github.com/redz2/gozsy/learn/x v0.1.0
 	github.com/prometheus/client_golang v1.16.0
 	github.com/prometheus/common v0.42.0
 )
