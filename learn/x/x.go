@@ -1,4 +1,4 @@
-package mymoduletest
+package x
 
 import "fmt"
 

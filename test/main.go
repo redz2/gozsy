@@ -25,7 +25,5 @@ func main() {
 	// default:
 	// 	panic(ctx.Command())
 	// }
-	// mymoduletest.PrintHelloWorld()
 	a.A()
-
 }
