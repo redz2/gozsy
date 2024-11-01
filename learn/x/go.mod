@@ -1,3 +1,3 @@
-module github.com/redz2/gozsy/learn/my_module_test
+module github.com/redz2/gozsy/learn/x
 
 go 1.23.2
