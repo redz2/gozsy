@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+
 	// context本质是为了处理go的并发控制问题
 
 	// 多个任务并行控制，等待所有任务完成
@@ -99,7 +100,7 @@ func main() {
 		}(i, data, exit)
 	}
 
-	// 等携程创建好
+	// 等协程创建好
 	time.Sleep(3 * time.Second)
 	go func() {
 		// 传一些值过去，控制任务的停止
@@ -119,7 +120,6 @@ func main() {
 	wg.Wait()
 
 	fmt.Println("last executed")
-
 }
 
 // 既然channel可以处理这些问题，为什么要引入context？

@@ -34,6 +34,8 @@ func HttpRequest(method string, url string, body io.Reader) {
 		fmt.Printf("string(d): %v\n", string(d))
 	}
 
+	// 5. 解析JSON
+	// json只是字符串的一种特定格式，必须要解析成结构体
 }
 
 // 复用*http.Client会有性能瓶颈吗？

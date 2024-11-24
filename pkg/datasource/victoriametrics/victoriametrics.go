@@ -58,5 +58,4 @@ func (v *VMStorage) Query(ctx context.Context, promql string) (*response, error)
 		return nil, err
 	}
 	return r, nil
-
 }

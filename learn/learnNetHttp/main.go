@@ -18,7 +18,3 @@ func main() {
 	// 对于每一个请求，都会创建一个协程去处理
 	http.ListenAndServe(":8080", nil)
 }
-
-func asd() {
-
-}

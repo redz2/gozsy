@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"unicode/utf8"
 	"strings"
+	"unicode/utf8"
 )
 
 // 字符串是不可变字节序列: 只读字节序列(string底层是字节序列)
@@ -46,13 +46,13 @@ func main() {
 	// 数字
 	// 任何类型都有字符串表示形式
 	var a int
-	a = 0x61 // a = 97  要搞清楚字面量就是一种表示，书写格式，实际类型就是int，底层存储都是一样的
+	a = 0x61       // a = 97  要搞清楚字面量就是一种表示，书写格式，实际类型就是int，底层存储都是一样的
 	fmt.Println(a) // 数字默认打印十进制，并且结尾会加换行符
-	fmt.Printf("二进制: %b\n八进制: %o\n十进制: %d\n十六进制: %x\n默认格式: %v\n", a, a, a, a)
+	fmt.Printf("二进制: %b\n八进制: %o\n十进制: %d\n十六进制: %x\n默认格式: %v\n", a, a, a, a, a)
 	fmt.Printf("%T\n", a)
 
 	var c C = 666 // golang中是不是所有类型都有默认的字符串表示形式
-	fmt.Println(c) 
+	fmt.Println(c)
 
 	// 字符串
 	// 下面几种不过都是字符的书写方式
@@ -64,7 +64,7 @@ func main() {
 	// %q: 会给字符串的值加上引号(帮助你更清晰地看到字符串在内存中的实际表示)
 	// %x: 16进制
 	s := "中文\x61\142\u0041"
-	fmt.Printf("%T\n", s)		   // string
+	fmt.Printf("%T\n", s)          // string
 	fmt.Printf("%s\n", s)          // 中文abA
 	fmt.Printf("%x\n", s)          // e4b8ade69687616241
 	fmt.Printf("%q\n", s)          // "中文abA"
@@ -76,7 +76,7 @@ func main() {
 	// 结构体或数组
 	user := User{
 		name: "zhouyi",
-		age: 30,
+		age:  30,
 	}
 	// 通用（不通类型有不同的符号）
 	// %v 输出变量的值: {zhouyi 30}       会根据不同类型，输出变量的默认格式，int类型为啥是missing
@@ -88,7 +88,7 @@ func main() {
 	fmt.Printf("%v\n", user)
 	fmt.Printf("%T\n", user)
 
-	var nums []int = []int{1,2,3,4,5}
+	var nums []int = []int{1, 2, 3, 4, 5}
 	fmt.Printf("%v\n", nums)
 	fmt.Printf("%T\n", nums)
 
@@ -114,22 +114,18 @@ func main() {
 
 	// 字符转换: 必须先转换成可变类型，完成后再转换回来
 
-
 	// strings.Builder（只允许拼接或重置，不允许修改，当然[]byte是可以修改的，只是字符串做了限制，不允许我们修改）
 	// 拼接
 	s2 := "i am shaw"
 	s3 := s2 + "ok" // 会把所有字符串依次拷贝到足够大的内存空间
-	fmt.Printf("s3 ===>%s\n",s3) 
+	fmt.Printf("s3 ===>%s\n", s3)
 
 	var builder strings.Builder
 	builder.Grow(10)
 	fmt.Printf("builder length is: %d\n", builder.Len())
 
 	// 裁剪
-	fmt.Printf("s2 ===> %s\n",s2[0:3]) // 底层数组做切片
-	
-
-
+	fmt.Printf("s2 ===> %s\n", s2[0:3]) // 底层数组做切片
 
 	// s := "My name is zhouyi\n"
 	// a := []byte(s)
@@ -184,5 +180,4 @@ func main() {
 	// fmt.Println(strings.Index("zhouyi", "yi"))
 	// // 删除字符串中的空格
 	// fmt.Println(strings.TrimSpace(" Here we go "))
-
 }
