@@ -1,12 +1,12 @@
 package main
 
 import (
-	"database/sql"
+	"database/sql" // 只提供了一套操作数据库的接口和规范（文件中只定义了接口，没有具体实现）
 	"fmt"
 	"log"
 	"time"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/go-sql-driver/mysql" // 会调用mysql包的init函数，引入MySQL驱动
 )
 
 func main() {

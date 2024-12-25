@@ -72,11 +72,6 @@
     fmt.Printf("%b %o %d %x", 100, 100, 100, 100)
     ```
 5. 引用类型
-    * 未初始化值时为nil
-        * 指针只是引用类型中的一种
-        * 引用类型其实是特殊的struct，golang对其有特殊处理，比如初始化时设置为nil，其实和有值时内存布局一致
-            * 这样子使用起来更简单，但是不直观
-        * nil是零值写法，本身没有默认类型（不过可以表示内存布局不一致的各种引用数据类型的零值）
     * new 和 make 的区别？
         * new: 分配内存，返回指向该内存的指针
         * make: 用于为map，slice，channel分配和初始化内存，返回类型本身（slice是引用类型，但他不仅仅是一个指针这么简单）
@@ -84,29 +79,3 @@
         var i *int = new(int)
         var s []int = make([]int, 3)
         ```
-6. 类型转换
-    * 何时可以类型转换？
-
-7. 自定义类型
-    * 如何定义自定义类型
-    ```
-    type flags byte
-
-    // 组
-    type ( 
-        user struct {  // 结构体
-            name string
-            age  int
-        }
-        event func（string) bool // 函数
-    )
-    ```
-    * 即便重新定义基础类型，也只表示有相同的底层数据结构，两者间不存在任何关系
-    ```
-    type data int
-    var x data = 10
-    var y int = data // 错误，无法赋值
-
-    var z int = 10
-    fmt.Println(x==z) // 错误，无法比较
-    ```

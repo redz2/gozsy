@@ -7,9 +7,10 @@ import (
 	"time"
 )
 
-// 把函数当成一个类型
+// 中间件，本身是一个函数类型，包裹handler处理函数
 type Middleware func(http.HandlerFunc) http.HandlerFunc
 
+// 中间件工厂函数，用来生成中间件
 // Logging logs all requests with its path and the time it took to process
 func Logging() Middleware {
 
@@ -50,20 +51,29 @@ func Method(m string) Middleware {
 	}
 }
 
+// 使用中间件来增强handler功能
 // Chain applies middlewares to a http.HandlerFunc
 func Chain(f http.HandlerFunc, middlewares ...Middleware) http.HandlerFunc {
 	for _, m := range middlewares {
 		f = m(f)
 	}
-	return f
+	return f // 经过各种中间件，返回一个新的HandlerFunc
 }
 
 func Hello(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "hello world")
 }
 
+// 有空就看看整个逻辑
 func main() {
-	// 需要添加什么功能，就添加什么功能
 	http.HandleFunc("/", Chain(Hello, Method("GET"), Logging()))
 	http.ListenAndServe(":8080", nil)
 }
+
+// 总结
+// 1. 中间件
+// 增强函数功能（装饰器）
+
+// 2. Pipeline（更加优雅的中间件写法）
+// 使用中间件可以增强函数功能，不过使用中间件时会形成函数嵌套
+// 通过Pipeline，也就是上面的Chain函数，使用时嵌套结构就变成扁平结构了
